@@ -25,6 +25,7 @@ navTriggerBtn.addEventListener('click', () => {
   moreSection.ariaHidden = 'false'
 
   for (let i = 0; i < navLinkList.length; i++) {
-    console.log(navLinkList)
+    navLinkList[i].classList.add('flex-y')
+    navLinkList[i].classList.replace('align-center', 'align-start')
   }
 })
