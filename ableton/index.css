@@ -1,108 +1,19 @@
 @import url(../reset.css);
 
-body {
-  font-family: futura-pt, Avenir, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
-    'Helvetica Neue', Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-size: 1rem;
-  color: #000;
+:root {
+  --red: #ff764d;
+  --yellow: #fbffa7;
+  --blue: #b1c5ff;
+  --pink: #d5b3ff;
+  --green: #b6ffc0;
+  --blue: #0000ff;
+
+  --base-fs: clamp(0.8rem, calc(0.8rem + 0.6vw), 1.5rem);
+  --base-fs-sm: clamp(0.8rem, calc(0.8rem + 0.5vw), 1rem);
+  --base-fs-md: clamp(0.8rem, calc(0.84rem + 0.5vw), 1.25rem);
 }
 
-main {
-  background-color: #ffffff;
-}
-
-nav[aria-label='primary'] {
-  display: flex;
-}
-
-.main-nav {
-  position: relative;
-  padding-top: 1.25rem;
-  padding-bottom: 0;
-  overflow: visible;
-  padding-right: 17px;
-}
-
-.main-nav a {
-  color: inherit;
-  text-decoration: none;
-}
-
-.main-nav__logo {
-  position: relative;
-  margin-left: 2.5rem;
-  margin-right: 2em;
-  margin-bottom: 1.25rem;
-}
-
-.main-nav__logo svg {
-  display: block;
-  width: 3.75em;
-  height: 1.75em;
-}
-
-.main-nav__trigger-btn {
-  display: none;
-}
-
-.main-nav__primary-wrapper {
-  flex: 1;
-}
-
-.main-nav__primary-wrapper .main-nav__link-list {
-  display: flex;
-  font-size: 1.25rem;
-  line-height: 1.5;
-  margin-bottom: 1.25rem;
-}
-
-.main-nav__link-list__item {
-  display: inline-block;
-  vertical-align: middle;
-  margin-left: 0;
-  margin-right: 0.3125rem;
-  padding-right: 0.625rem;
-  padding-left: 0.625rem;
-  order: 1;
-}
-
-.main-nav__link-list__item.is-active {
-  color: #ff764d;
-  flex: 1;
-}
-
-button.main-nav__more-button {
-  display: flex;
-  align-items: center;
-  gap: 0.4em;
-}
-
-.main-nav__more-button span.plus-icon {
-  height: 12px;
-  width: 12px;
-  display: grid;
-  align-items: center;
-  justify-content: center;
-}
-
-.main-nav__more-button span.plus-icon .x-line {
-  width: 12px;
-  height: 2.5px;
-  background-color: #ff764d;
-  grid-area: 1/1;
-  align-self: center;
-}
-
-.main-nav__more-button span.plus-icon .y-line {
-  width: 2.5px;
-  height: 12px;
-  background-color: #ff764d;
-  grid-area: 1/1;
-  justify-self: center;
-}
-
-.abl-btn--reset {
+button {
   display: inline-block;
   padding: 0;
   margin: 0;
@@ -122,42 +33,205 @@ button.main-nav__more-button {
   border: none;
 }
 
-/* .main-nav__trigger-label {
-  font-size: 1.25rem;
+body {
+  font-family: futura-pt, Avenir, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+    'Helvetica Neue', Helvetica, Arial, sans-serif;
   line-height: 1.5;
-  transition-property: color;
-  transition-duration: 0.35s;
-  user-select: none;
-  position: relative;
-  display: inline-block;
-  vertical-align: middle;
-  margin-bottom: 0.9375rem;
-  font-weight: bold;
-  cursor: pointer;
+  font-size: var(--base-fs);
+  color: #000;
 }
 
-.main-nav__link-list {
+main {
+  background-color: #ffffff;
+  padding: 1.8rem;
+}
+
+.flex-x {
   display: flex;
+}
+
+.flex-y {
+  display: flex;
+  flex-direction: column;
+}
+
+.flex-1 {
   flex: 1;
 }
 
-.main-nav__link-list--primary {
-  font-size: 1.25rem;
-  line-height: 1.5;
-  margin-bottom: 1.25rem;
+.gap-2 {
+  gap: 2em;
 }
 
-.main-nav__more-button.main-nav__more-button {
-  line-height: initial;
-  vertical-align: initial;
+nav[aria-label='primary'] {
+  gap: 1.25rem;
 }
 
-.main-nav__link-list__item--try {
-  font-size: 1.25rem;
-  line-height: 1.5;
-  color: blue;
+.main-nav {
+  position: relative;
+  padding-bottom: 0;
+  overflow: visible;
+}
+
+.main-nav a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.main-nav__logo {
+  position: relative;
+}
+
+.main-nav__logo svg {
+  display: block;
+  width: 3.75em;
+  height: 1.75em;
 }
 
 .main-nav__trigger-btn {
   display: none;
-} */
+  user-select: none;
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 1.25rem;
+  line-height: 1.5;
+}
+
+.main-nav__trigger-btn svg {
+  transform: rotateZ(270deg);
+}
+
+.main-nav__primary-wrapper {
+  flex: 1;
+}
+
+.main-nav__link-list {
+  display: flex;
+  font-size: var(--base-fs);
+  line-height: 1.5;
+  font-weight: 500;
+  align-items: center;
+}
+
+.main-nav__link-list > .item {
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 0;
+  margin-right: 0.3125rem;
+  padding-right: 0.625rem;
+  padding-left: 0.625rem;
+  order: 1;
+}
+
+.main-nav__link-list > .item.is-active {
+  color: var(--red);
+}
+
+.main-nav__more-button {
+  display: flex;
+  align-items: center;
+  gap: 0.4em;
+}
+
+.main-nav__more-button span.plus-icon {
+  height: 14px;
+  width: 14px;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+}
+
+.main-nav__more-button span.plus-icon .x-line {
+  width: 14px;
+  height: 2px;
+  background-color: var(--red);
+  grid-area: 1/1;
+  align-self: center;
+}
+
+.main-nav__more-button span.plus-icon .y-line {
+  width: 2px;
+  height: 14px;
+  background-color: var(--red);
+  grid-area: 1/1;
+  justify-self: center;
+}
+
+.main-nav__link-list > .item.item-try {
+  font-size: var(--base-fs-md);
+  line-height: 1.5;
+  color: var(--blue);
+}
+
+.main-nav__link-list > .item.item-account {
+  font-size: var(--base-fs-sm);
+  line-height: 1.5;
+}
+
+.main-nav__more {
+  font-size: var(--base-fs-md);
+  line-height: 1.5;
+  padding-top: 0.625rem;
+  padding-bottom: 1.875rem;
+  margin-bottom: 0;
+  gap: 1.5625rem;
+}
+
+#more-section {
+  display: none;
+}
+
+.main-nav__more .main-nav__section {
+  padding-top: 0;
+}
+
+.main-nav__section .heading {
+  font-size: var(--base-fs-md);
+  line-height: 1.5;
+  padding-bottom: 0.125rem;
+  font-weight: 500;
+}
+
+.main-nav__section .main-nav__link-list {
+  font-weight: 300;
+  font-size: var(--base-fs-md);
+}
+
+.main-nav__row.main-nav__link-list {
+  align-items: flex-start;
+}
+
+.main-nav__col {
+  flex: 1;
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+  font-size: var(--base-fs-md);
+}
+
+.main-nav__col h4 {
+  font-weight: 400;
+}
+
+.main-nav__separator {
+  display: block;
+  height: 0;
+  border-top: 2px solid #eee;
+}
+
+.main-nav__link-list-secondary {
+  padding-top: 1.0625rem;
+  padding-bottom: 0.9375rem;
+}
+
+@media screen and (min-width: 1025px) {
+  .main-nav__primary-wrapper {
+    display: none;
+  }
+
+  .main-nav__trigger-btn {
+    display: block;
+  }
+}
