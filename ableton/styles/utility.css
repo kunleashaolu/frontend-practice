@@ -1,0 +1,38 @@
+.flex-x {
+  display: flex;
+}
+
+.flex-y {
+  display: flex;
+  flex-direction: column;
+}
+
+.flex-1 {
+  flex: 1;
+}
+
+.gap-2 {
+  gap: 2em;
+}
+
+.gap-0 {
+  gap: 0.86rem;
+}
+
+.align-start {
+  align-items: start;
+}
+
+.align-center {
+  align-items: center;
+}
+
+.is-expanded {
+  background-color: #0000ff;
+  color: #ffffff !important;
+  fill: #ffffff;
+}
+
+.is-not-collapsed {
+  transform: translateY(0);
+}

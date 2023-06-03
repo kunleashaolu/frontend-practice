@@ -22,7 +22,7 @@
   <body>
     <main>
       <header class="main-nav">
-        <nav class="flex-y" aria-label="primary">
+        <nav id="primary-nav-section" class="flex-y" aria-label="primary">
           <div id="main-nav-wrapper" class="flex-x gap-2">
             <div class="flex-x gap-2">
               <a class="main-nav__logo">
@@ -50,15 +50,19 @@
                 Menu
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  width="18"
-                  height="18"
+                  width="16"
+                  height="16"
                   viewBox="0 0 1024 1024"
                 >
                   <path d="M672 192 288 511.936 672 832z" />
                 </svg>
               </button>
             </div>
-            <div class="main-nav__primary-wrapper" id="main-nav-content" aria-hidden="false">
+            <div
+              class="main-nav__primary-wrapper is-collapsed"
+              id="main-nav-content"
+              aria-hidden="false"
+            >
               <ul class="main-nav__link-list align-center">
                 <li class="item"><a href="#">Live</a></li>
                 <li class="item"><a href="#">Push</a></li>
@@ -91,7 +95,7 @@
               </ul>
             </div>
           </div>
-          <div class="flex-y main-nav__more" id="more-section" aria-hidden="true">
+          <div class="flex-y main-nav__more is-collapsed" id="more-section" aria-hidden="true">
             <section class="main-nav__section" aria-label="More on Ableton.com:" tabindex="0">
               <h3 class="heading">More on Ableton.com:</h3>
               <ul class="main-nav__link-list align-center">
@@ -170,7 +174,7 @@
         </nav>
         <div class="main-nav__separator"></div>
         <nav aria-label="secondary">
-          <ul class="main-nav__link-list main-nav__link-list-secondary align-center">
+          <ul class="main-nav__link-list-secondary align-center">
             <li class="item is-active">
               <a href="#" aria-current="page">About</a>
             </li>
