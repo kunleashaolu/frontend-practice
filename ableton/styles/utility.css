@@ -12,7 +12,7 @@
 }
 
 .gap-2 {
-  gap: 2em;
+  gap: calc(1em + 0.5vw);
 }
 
 .gap-0 {
@@ -27,12 +27,14 @@
   align-items: center;
 }
 
-.is-expanded {
-  background-color: #0000ff;
-  color: #ffffff !important;
-  fill: #ffffff;
+.display-none {
+  display: none;
 }
 
-.is-not-collapsed {
-  transform: translateY(0);
+.bg-lemonade {
+  background-color: #fbffa7;
+}
+
+.bg-spearmint {
+  background-color: #b6ffc0;
 }
