@@ -286,15 +286,14 @@ nav[aria-label='secondary'] {
 }
 
 .page-about__collage-products,
-.page-about__collage-people {
+.page-about__collage-people,
+.page-about__collage-improving {
   padding-top: var(--page-padding);
   padding-bottom: var(--page-padding);
   margin-bottom: var(--page-padding);
 }
 
 .page-about__collage-people {
-  /* padding-left: var(--page-padding);
-  padding-right: var(--page-padding); */
   display: grid;
 }
 
@@ -373,6 +372,21 @@ nav[aria-label='secondary'] {
   grid-area: 1/-1;
 }
 
+.page-about__collage__container {
+  grid-area: 1/-1;
+  align-self: center;
+  margin-left: var(--page-padding);
+}
+
+.page-about__collage-people .page-about__collage__container__media {
+  width: 33.33333vw;
+  height: 25vw;
+}
+
+.page-about__collage-people .page-about__collage__container__media:last-child {
+  margin-top: var(--page-padding);
+}
+
 .page-about__collage-people > .page-about__collage__media {
   width: 41.66667vw;
   height: 41.66667vw;
@@ -387,6 +401,195 @@ nav[aria-label='secondary'] {
   margin-left: var(--page-padding);
   margin-right: var(--page-padding);
   width: auto;
+}
+
+.page-about__collage-improving {
+  display: grid;
+}
+
+.page-about__collage-improving .page-about__collage__background {
+  width: 66.66667vw;
+  height: 58.33333vw;
+  position: relative;
+  justify-self: center;
+  grid-area: 1/-1;
+}
+
+.page-about__collage-improving .page-about__collage__media {
+  width: 33.33333vw;
+  height: 25vw;
+  margin-left: var(--page-padding);
+  grid-area: 1/-1;
+  align-self: center;
+}
+
+.page-about__collage-improving .page-about__collage__media:last-child {
+  width: 41.66667vw;
+  height: 41.66667vw;
+  margin-left: calc(var(--page-padding) * 2);
+  grid-area: 1/-1;
+  align-self: center;
+  justify-self: right;
+}
+
+.page-about__jobs-teaser {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: var(--page-padding);
+  margin-right: var(--page-padding);
+}
+
+.page-about__jobs-teaser__media {
+  min-width: 535px;
+  flex: 1;
+  flex-grow: 2;
+}
+
+.page-about__jobs-teaser__text {
+  min-width: 535px;
+  padding: var(--page-padding);
+  flex: 1;
+}
+
+.page-about__jobs-teaser__text .body-text h1 {
+  font-weight: 500;
+}
+
+.page-about__jobs-teaser__text__wrapper a {
+  display: block;
+  margin-top: 1em;
+  text-decoration: none;
+}
+
+.main-footer {
+  max-width: 100rem;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #fff;
+}
+
+.main-footer__separator {
+  padding-top: var(--page-padding);
+  position: relative;
+  background-color: #fff;
+}
+
+.main-footer__separator::after {
+  content: '';
+  display: block;
+  height: 0;
+  border-top: 2px solid #efefef;
+  position: absolute;
+  left: 0;
+  right: 0;
+}
+
+.main-footer__container {
+  padding-left: var(--page-padding);
+  padding-right: var(--page-padding);
+}
+
+.main-footer__content {
+  padding-top: var(--page-padding);
+}
+
+.main-footer__row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.main-footer__column {
+  margin-bottom: 4.16667vw;
+  width: max(100%, 15vw);
+  margin-right: 1rem;
+}
+
+.main-footer h3 {
+  margin: 0;
+  font-size: 1em;
+  font-weight: bold;
+}
+
+.main-footer__basics__logo {
+  width: max(122px, 14vw);
+}
+
+.newsletter__container {
+  order: 3;
+}
+
+.main-footer__column .newsletter__form {
+  margin-top: 1rem;
+}
+
+.form__group {
+  display: flex;
+  min-width: 342px;
+}
+
+.form__field {
+  flex: 1;
+}
+
+.form__field input[type='email'] {
+  font-size: inherit;
+  width: 100%;
+  margin: 0;
+  padding: 0.4em 0.75em;
+  background: transparent;
+  background-color: #eee;
+  border: 0;
+  user-select: none;
+  font-weight: normal;
+  border-radius: 0;
+}
+
+.form__group .button {
+  margin: 0;
+  padding: 0.35em 1.5em;
+  font-weight: bold;
+  font-size: inherit;
+  color: #fff;
+  background: blue;
+  border: 0;
+  border-radius: 0;
+  cursor: pointer;
+  appearance: none;
+}
+
+.main-footer__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  font-weight: normal;
+}
+
+.main-footer a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.main-footer__social-listitem {
+  display: inline-block;
+}
+
+.main-footer__social-button {
+  width: 2.3rem;
+  height: 2.3rem;
+  margin-top: 0.625rem;
+  display: inline-block;
+  vertical-align: top;
+  font-size: 0;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  margin-right: 0.625rem;
+}
+
+@media screen and (max-width: 1283px) {
+  .page-about__jobs-teaser__media {
+    height: 50vw;
+  }
 }
 
 @media screen and (max-width: 1026px) {

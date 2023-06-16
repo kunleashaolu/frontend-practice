@@ -38,3 +38,31 @@
 .bg-spearmint {
   background-color: #b6ffc0;
 }
+
+.bg-lavender {
+  background-color: #d5b3ff;
+}
+
+.bg-periwinkle {
+  background-color: #b1c5ff;
+}
+
+.has-arrow:after {
+  content: '\00a0›';
+}
+
+.twitter {
+  background-color: #1da1f2;
+}
+
+.facebook {
+  background-color: #3477f2;
+}
+
+.youtube {
+  background-color: #ff001d;
+}
+
+.instagram {
+  background-color: #f77737;
+}
