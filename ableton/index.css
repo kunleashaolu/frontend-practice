@@ -440,15 +440,16 @@ nav[aria-label='secondary'] {
 }
 
 .page-about__jobs-teaser__media {
-  min-width: 535px;
-  flex: 1;
-  flex-grow: 2;
+  width: max(535px, 50%);
+  height: 41.66667vw;
 }
 
 .page-about__jobs-teaser__text {
-  min-width: 535px;
+  width: max(535px, 50%);
   padding: var(--page-padding);
-  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .page-about__jobs-teaser__text .body-text h1 {
@@ -670,11 +671,17 @@ nav[aria-label='secondary'] {
   font-size: 0.875rem;
   line-height: 1.5;
   font-weight: bold;
+  width: -webkit-fill-available;
+  width: -moz-available;
 }
 
 @media screen and (max-width: 1283px) {
   .page-about__jobs-teaser__media {
     height: 50vw;
+  }
+
+  .page-about__jobs-teaser > * {
+    width: 100%;
   }
 }
 
