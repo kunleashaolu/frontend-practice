@@ -235,7 +235,7 @@ nav[aria-label='secondary'] {
   color: var(--red);
 }
 
-.page-about__text-wrapper {
+.page-about__wrapper {
   padding-left: var(--page-padding);
   padding-right: var(--page-padding);
 }
@@ -533,7 +533,6 @@ nav[aria-label='secondary'] {
 
 .form__group {
   display: flex;
-  min-width: 342px;
 }
 
 .form__field {
@@ -603,6 +602,7 @@ nav[aria-label='secondary'] {
   font-size: 0.875rem;
   margin-top: 0.75em;
   display: flex;
+  flex-wrap: wrap;
   gap: 4px;
 }
 
